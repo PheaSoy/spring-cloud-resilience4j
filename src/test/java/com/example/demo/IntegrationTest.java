@@ -49,7 +49,7 @@ public class IntegrationTest extends AbstractIntegrationTest {
 
         log.info("Call -> {}",i);
         ResponseEntity<BaseResponse> r = template.exchange(Uri("orders"), HttpMethod.GET, null, BaseResponse.class, 1);
-        log.info("Got body:{}",r.getBody());
+        log.info("Body msg:{}",r.getBody().getMsg());
         Assertions.assertThat(r.getStatusCode()).isEqualTo(HttpStatus.OK);
     }
     String Uri(String uri){

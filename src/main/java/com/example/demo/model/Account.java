@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Getter
 @Setter
 @SuperBuilder
-public class Account extends BaseResponse{
+public class Account{
+    @NonNull
     private String accountNo;
     private boolean isDeleted;
     private String phoneNumber;
+    private String name;
 }

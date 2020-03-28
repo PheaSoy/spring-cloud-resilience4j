@@ -4,3 +4,9 @@ logging.level.io.github.resilience4j: DEBUG
 spring:
   main:
     lazy-initialization: true
+
+account-service:
+  url: http://localhost:9091
+
+wallet-service:
+  url: http://localhost:9092
